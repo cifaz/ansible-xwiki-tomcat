@@ -1,0 +1,21 @@
+---
+util_package_state: "{{ util_package_state_debian }}"
+
+util_package_states:
+  - installed
+  - latest
+  - absent
+
+#util_package_list_ansible_deps:
+#  - 
+tomcat_use_distrib_version_default: true
+tomcat_server_version_default: "tomcat7"
+tomcat_host_default: "{{ ansible_hostname }}"
+tomcat_ip_default: "{{ ansible_eth0.ipv4.address }}"
+
+tomcat_port_default: "8080"
+tomcat_webapps_default: ""
+tomcat_manager_xwiki_user_default: "Admin"
+#tomcat_manager_xwiki_user_default: "to change"
+tomcat_manager_RemoteAddrValve_allow_default: "127.0.0.1"
+

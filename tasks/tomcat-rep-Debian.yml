@@ -1,0 +1,15 @@
+- name: Check if my_package is installed (Verifie la presence du serveur tomcat)
+  become: true
+  apt: 
+    name: 
+     - "{{tomcat_server_version}}"
+     - "{{tomcat_server_version}}-admin"
+    update_cache: "yes" 
+    cache_valid_time: "{{util_package_cache_valid_time | default(3600)}}"
+    state: latest  
+
+- name: Create manager configuration file (Cree la configuration)
+  become: true
+  template: 
+    src: "manager-xml.j2" 
+    dest: /etc/tomcat7/Catalina/localhost/manager.xml          

@@ -1,0 +1,16 @@
+---
+# defaults file for ansible-xwiki-tomcat
+
+util_persistent_data_path_remote: "{{ ansible_local.general.persistent_data_path|default(\"/usr/local/src/ansible/data\") }}"
+tomcat_use_distrib_version: "{{tomcat_use_distrib_version_default}}"
+tomcat_manager_xwiki_password_set_random_value: true
+
+#
+tomcat_server_version: "{{tomcat_server_version_default}}"
+tomcat_host: "{{ tomcat_host_default }}"
+tomcat_ip: "{{ tomcat_ip_default }}" 
+tomcat_port: "{{tomcat_port_default}}"
+tomcat_manager_xwiki_user: "{{tomcat_manager_xwiki_user_default}}"
+tomcat_manager_xwiki_password: "{{tomcat_manager_xwiki_password_default}}"
+#https://tomcat.apache.org/tomcat-7.0-doc/config/valve.html#Remote_Address_Filter
+tomcat_manager_RemoteAddrValve_allow: "{{tomcat_manager_RemoteAddrValve_allow_default}}"
