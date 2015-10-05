@@ -1,7 +1,4 @@
 { "__comment": "I wonder if I put too much fact",
-  "xwiki" : {
-  "app-server": {
-		},
 		"tomcat": {
 			"tomcat_server_version" : "{{ tomcat_server_version | default(tomcat_server_version_default) }}",
 			"tomcat_host" : "{{ tomcat_host | default(ansible_eth0.ipv4.address) }}",
@@ -13,5 +10,4 @@
 			"tomcat_manager_xwiki_password" : "{{ tomcat_manager_xwiki_password | default(tomcat_manager_xwiki_password_default) }}"
 
 		}
-  }
 }

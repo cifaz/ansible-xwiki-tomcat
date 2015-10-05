@@ -1,2 +1,13 @@
 ---
 # handlers file for ansible-xwiki-tomcat
+- name: stop tomcat
+  become: true
+  service: 
+    name: tomcat
+    state: stop
+
+- name: start tomcat
+  become: true
+  service: 
+    name: tomcat
+    state: start
