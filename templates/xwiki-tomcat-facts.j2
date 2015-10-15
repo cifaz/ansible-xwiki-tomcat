@@ -1,0 +1,13 @@
+{ "__comment": "I wonder if I put too much fact",
+		"tomcat": {
+			"tomcat_server_version" : "{{ tomcat_server_version | default(tomcat_server_version_default) }}",
+			"tomcat_host" : "{{ tomcat_host | default(ansible_eth0.ipv4.address) }}",
+  		"tomcat_use_distrib_version" : "{{ tomcat_use_distrib_version | default(tomcat_use_distrib_version_default) }}",
+			"tomcat_ip" : "{{ tomcat_ip | default(tomcat_ip_default_default) }}",
+			"tomcat_port" : "{{ tomcat_host_port | default(tomcat_port_default) }}",
+			"tomcat_webapps" : "{{ tomcat_webapps | default(tomcat_webapps_default) }}",
+			"tomcat_manager_xwiki_user" : "{{ tomcat_manager_xwiki_user | default(tomcat_manager_xwiki_user) }}",
+			"tomcat_manager_xwiki_password" : "{{ tomcat_manager_xwiki_password | default(tomcat_manager_xwiki_password_default) }}"
+
+		}
+}

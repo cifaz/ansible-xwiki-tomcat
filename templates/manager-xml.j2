@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/manager" 
+        docBase="/usr/share/tomcat7-admin/manager" 
+        antiResourceLocking="false" privileged="true">
+        <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+   allow="{{tomcat_manager_RemoteAddrValve_allow}}"/>
+</Context>
